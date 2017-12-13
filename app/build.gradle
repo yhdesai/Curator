@@ -1,9 +1,14 @@
 apply plugin: 'com.android.application'
 
 repositories {
-    mavenLocal()
+
+    maven {
+        url "https://maven.google.com"
+    }
+ //   mavenLocal()
     flatDir {
         dirs 'libs'
+
     }
 }
 
@@ -12,7 +17,7 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "io.github.yhdesai.curatorDev"
+        applicationId "io.github.yhdesai.curator"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
@@ -32,18 +37,20 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:design:27.0.2'
-    compile 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+   implementation 'com.android.support:appcompat-v7:27.0.2'
     // Displaying images
-    compile 'com.github.bumptech.glide:glide:4.3.1'
+   // compile 'com.github.bumptech.glide:glide:4.3.1'
     // Firebase
-    compile 'com.google.firebase:firebase-database:11.6.2'
+    implementation 'com.google.firebase:firebase-database:11.6.2'
+    implementation 'com.google.firebase:firebase-auth:11.6.2'
+    implementation 'com.firebaseui:firebase-ui-auth:2.1.1'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
-    compile 'com.codewaves.youtubethumbnailview:library:0.9.2'
+    implementation 'com.codewaves.youtubethumbnailview:library:0.9.2'
 }
+
 
 
 apply plugin: 'com.google.gms.google-services'
