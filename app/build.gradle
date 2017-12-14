@@ -45,8 +45,8 @@ dependencies {
    // compile 'com.github.bumptech.glide:glide:4.3.1'
     // Firebase
     implementation 'com.google.firebase:firebase-database:11.6.2'
-    implementation 'com.google.firebase:firebase-auth:11.6.2'
-    implementation 'com.firebaseui:firebase-ui-auth:2.1.1'
+   // implementation 'com.google.firebase:firebase-auth:11.6.2'
+ //   implementation 'com.firebaseui:firebase-ui-auth:2.1.1'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.codewaves.youtubethumbnailview:library:0.9.2'
 }
