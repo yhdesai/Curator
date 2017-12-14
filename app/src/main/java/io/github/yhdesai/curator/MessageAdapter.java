@@ -64,7 +64,8 @@ public class MessageAdapter extends ArrayAdapter<FriendlyMessage> {
 
 return convertView;
 
-}}
+}
+}
 
 
 // Intent intent = YouTubeStandalonePlayer.createVideoIntent(this, DeveloperKey.DEVELOPER_KEY, message.getName());

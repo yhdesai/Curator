@@ -162,9 +162,6 @@ public class category2 extends AppCompatActivity {
         mMessagesDatabaseReference.addChildEventListener(mChildEventListener);
 
 
-
-
-
     }
 
     @Override
