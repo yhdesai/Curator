@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     // Left to Right swipe action
                     if (x2 > x1) {
                         Toast.makeText(this, "Left to Right swipe [Next]", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, category2.class);
+                        Intent intent = new Intent(MainActivity.this, PlayerControlsDemoActivity.class);
                         startActivity(intent);
 
                     }

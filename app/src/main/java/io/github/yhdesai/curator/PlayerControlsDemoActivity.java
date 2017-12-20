@@ -46,11 +46,11 @@ import android.widget.TextView;
 public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity implements
     View.OnClickListener,
     TextView.OnEditorActionListener,
-    CompoundButton.OnCheckedChangeListener,
-    AdapterView.OnItemSelectedListener {
+    CompoundButton.OnCheckedChangeListener
+   // AdapterView.OnItemSelectedListener
+        {
 
   private static final ListEntry[] ENTRIES = {
-      new ListEntry("Androidify App", "irH3OSOskcE", false),
       new ListEntry("Chrome Speed Tests", "nCgQDjiotG0", false),
       new ListEntry("Playlist: Google I/O 2012", "PL56D792A831D0C362", true)};
 
@@ -94,12 +94,12 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
     ((RadioButton) findViewById(R.id.style_minimal)).setOnCheckedChangeListener(this);
     ((RadioButton) findViewById(R.id.style_chromeless)).setOnCheckedChangeListener(this);
     logString = new StringBuilder();
-
+/*
     videoAdapter = new ArrayAdapter<ListEntry>(this, android.R.layout.simple_spinner_item, ENTRIES);
     videoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     videoChooser.setOnItemSelectedListener(this);
     videoChooser.setAdapter(videoAdapter);
-
+*/
     playButton.setOnClickListener(this);
     pauseButton.setOnClickListener(this);
     skipTo.setOnEditorActionListener(this);
@@ -144,17 +144,19 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
     }
   }
 
+  /*
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
     currentlySelectedPosition = pos;
-    playVideoAtSelection();
+   //////////////////////////////////////// playVideoAtSelection();
   }
-
+  */
+/*
   @Override
   public void onNothingSelected(AdapterView<?> parent) {
     // Do nothing.
   }
-
+*/
   @Override
   public void onClick(View v) {
     if (v == playButton) {
