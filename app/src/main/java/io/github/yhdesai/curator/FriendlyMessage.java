@@ -17,9 +17,9 @@ package io.github.yhdesai.curator;
 
 public class FriendlyMessage {
 
-    private String text;
-    private String name;
-    private String photoUrl;
+    public String text;
+    public String name;
+    public String photoUrl;
 
     public FriendlyMessage() {
     }

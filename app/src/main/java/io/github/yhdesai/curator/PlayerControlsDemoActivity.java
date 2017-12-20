@@ -51,9 +51,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
         {
 
   private static final ListEntry[] ENTRIES = {
-      new ListEntry("Chrome Speed Tests", "nCgQDjiotG0", false),
-      new ListEntry("Playlist: Google I/O 2012", "PL56D792A831D0C362", true)};
-
+      new ListEntry("Playlist: Google I/O 2012", "PL56D792A831D0C362", false)};
   private static final String KEY_CURRENTLY_SELECTED_ID = "currentlySelectedId";
 
   private YouTubePlayerView youTubePlayerView;
@@ -148,7 +146,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
     currentlySelectedPosition = pos;
-   //////////////////////////////////////// playVideoAtSelection();
+    playVideoAtSelection();
   }
 
 
