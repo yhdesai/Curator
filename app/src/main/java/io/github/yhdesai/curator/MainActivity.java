@@ -163,5 +163,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onTouchEvent(event);
     }
 
+    public void playVideo(){
+        Intent intent = new Intent(this, PlayerControlsDemoActivity.class);
+        startActivity(intent);
+    }
+
 }
 
