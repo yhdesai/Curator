@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+/**
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onTouchEvent(event);
-    }
+    }  **/
 
     public void playVideo(){
         Intent intent = new Intent(this, PlayerControlsDemoActivity.class);
