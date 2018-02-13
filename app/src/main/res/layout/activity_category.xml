@@ -19,14 +19,14 @@
             android:layout_gravity="center"
             android:onClick="channel1"
             android:id="@+id/channel1"
-
-            android:text="BUTTON" />
+            android:text="channel1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="BUTTON" />
+            android:text="video"
+            android:onClick="video"/>
 
         <Button
             android:layout_width="wrap_content"

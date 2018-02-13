@@ -51,7 +51,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
         {
 
   private static final ListEntry[] ENTRIES = {
-      new ListEntry("Playlist: Google I/O 2012", "PL56D792A831D0C362", false)};
+      new ListEntry("Playlist: Google I/O 2012", "PL56D792A", false)};
   private static final String KEY_CURRENTLY_SELECTED_ID = "currentlySelectedId";
 
   private YouTubePlayerView youTubePlayerView;
@@ -154,7 +154,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
   public void onNothingSelected(AdapterView<?> parent) {
     // Do nothing.
   }
-
+//TODO  change the code here to check if the player is running or not, and perform action accordingly
   @Override
   public void onClick(View v) {
     if (v == playButton) {

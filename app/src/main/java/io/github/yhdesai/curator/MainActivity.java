@@ -69,8 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = new Intent(MainActivity.this, category.class);
+        startActivity(intent);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         mToken = video_token;
 

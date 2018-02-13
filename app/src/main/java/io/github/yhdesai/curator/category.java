@@ -16,4 +16,8 @@ public class category extends AppCompatActivity {
         Intent channel1 = new Intent (this, channel1.class);
         startActivity(channel1);
     }
+    public void video (View view){
+        Intent video = new Intent(this, PlayerControlsDemoActivity.class);
+        startActivity(video);
+    }
 }

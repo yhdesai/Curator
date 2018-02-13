@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright 2012 Google Inc. All Rights Reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,37 +13,67 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="match_parent">
 
-  <TextView
-      android:id="@+id/state_text"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingTop="5dp"
-      android:gravity="center_horizontal"
-      android:singleLine="true"/>
-
-  <com.google.android.youtube.player.YouTubePlayerView
-      android:id="@+id/youtube_view"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="8dp"
-      android:orientation="horizontal"
-      android:gravity="top">
-
-    <include
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/state_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        layout="@layout/player_controls_container" />
+        android:gravity="center_horizontal"
+
+        android:singleLine="true" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+    <Spinner
+        android:id="@+id/video_chooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/pause" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/skip_to" />
+
+    <EditText
+        android:id="@+id/skip_to_text"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/seconds" />
+
 
     <RadioGroup
         android:id="@+id/style_radio_group"
@@ -52,46 +81,75 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textAppearance="@android:style/TextAppearance.Medium"
-          android:text="@string/player_style"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_style"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-      <RadioButton
-          android:id="@+id/style_default"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:checked="true"
-          android:text="@string/def"/>
+        <RadioButton
+            android:id="@+id/style_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/def" />
 
-      <RadioButton
-          android:id="@+id/style_minimal"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/minimal"/>
+        <RadioButton
+            android:id="@+id/style_minimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minimal" />
 
-      <RadioButton
-          android:id="@+id/style_chromeless"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/chromeless"/>
+        <RadioButton
+            android:id="@+id/style_chromeless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chromeless" />
 
     </RadioGroup>
 
-  </LinearLayout>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1">
-
-    <TextView
-        android:id="@+id/event_log"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"/>
+        android:layout_height="0dp">
 
-  </ScrollView>
+        <TextView
+            android:id="@+id/event_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
 
-</LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:contentDescription="play/pause"
+            android:id="@+id/play_button"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="2:34"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+          />
+    </LinearLayout>
+</RelativeLayout>
+
