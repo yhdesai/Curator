@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-/**
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     // Left to Right swipe action
                     if (x2 > x1) {
                         Toast.makeText(this, "Left to Right swipe [Next]", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, PlayerControlsDemoActivity.class);
+                        Intent intent = new Intent(MainActivity.this, category.class);
                         startActivity(intent);
 
                     }
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onTouchEvent(event);
-    }  **/
+    }
 
     public void playVideo(){
         Intent intent = new Intent(this, PlayerControlsDemoActivity.class);
