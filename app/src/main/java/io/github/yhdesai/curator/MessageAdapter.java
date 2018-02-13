@@ -48,7 +48,7 @@ public class MessageAdapter extends ArrayAdapter<FriendlyMessage> {
         TextView videoNameTextView = (TextView) convertView.findViewById(R.id.videoNameTextView);
         //   TextView videoTokenTextView = (TextView) convertView.findViewById(R.id.videoTokenTextView);
         //   Button playButton = (Button) convertView.findViewById(R.id.playButton);
-        ThumbnailView thumb = (ThumbnailView) convertView.findViewById(R.id.thumbnail);
+        ThumbnailView thumb = (ThumbnailView) convertView.findViewById(R.id.youtube_view);
 
         FriendlyMessage message = getItem(position);
 

@@ -48,10 +48,10 @@ import java.util.List;
 
 import static android.provider.MediaStore.Video.Thumbnails.VIDEO_ID;
 
-public class MainActivity extends AppCompatActivity {
+public class channel1 extends AppCompatActivity {
 
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "channel1";
     public static String video_token = "token here";
     public ListView mMessageListView;
     private MessageAdapter mMessageAdapter;
@@ -70,14 +70,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_channel1);
 
         mToken = video_token;
 
         // Initialize Firebase components
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 
-        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("ctegory1");
+        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("category1");
 
         // Initialize references to views
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -129,39 +129,39 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-/**
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                x1 = event.getX();
-                break;
-            case MotionEvent.ACTION_UP:
-                x2 = event.getX();
-                float deltaX = x2 - x1;
+    /**
+     @Override
+     public boolean onTouchEvent(MotionEvent event) {
+     switch (event.getAction()) {
+     case MotionEvent.ACTION_DOWN:
+     x1 = event.getX();
+     break;
+     case MotionEvent.ACTION_UP:
+     x2 = event.getX();
+     float deltaX = x2 - x1;
 
-                if (Math.abs(deltaX) > MIN_DISTANCE) {
-                    // Left to Right swipe action
-                    if (x2 > x1) {
-                        Toast.makeText(this, "Left to Right swipe [Next]", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, PlayerControlsDemoActivity.class);
-                        startActivity(intent);
+     if (Math.abs(deltaX) > MIN_DISTANCE) {
+     // Left to Right swipe action
+     if (x2 > x1) {
+     Toast.makeText(this, "Left to Right swipe [Next]", Toast.LENGTH_SHORT).show();
+     Intent intent = new Intent(MainActivity.this, PlayerControlsDemoActivity.class);
+     startActivity(intent);
 
-                    }
+     }
 
-                    // Right to left swipe action
-                    else {
-                        Toast.makeText(this, "Right to Left swipe [Previous]", Toast.LENGTH_SHORT).show();
+     // Right to left swipe action
+     else {
+     Toast.makeText(this, "Right to Left swipe [Previous]", Toast.LENGTH_SHORT).show();
 
-                    }
+     }
 
-                } else {
-                    // consider as something else - a screen tap for example
-                }
-                break;
-        }
-        return super.onTouchEvent(event);
-    }  **/
+     } else {
+     // consider as something else - a screen tap for example
+     }
+     break;
+     }
+     return super.onTouchEvent(event);
+     }  **/
 
     public void playVideo(){
         Intent intent = new Intent(this, PlayerControlsDemoActivity.class);
