@@ -16,7 +16,9 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/videoView"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/state_text"
@@ -55,24 +57,12 @@
         android:text="@string/pause" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/skip_to" />
-
     <EditText
         android:id="@+id/skip_to_text"
         android:layout_width="60sp"
         android:layout_height="wrap_content"
 
         android:inputType="number" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/seconds" />
 
 
     <RadioGroup
@@ -127,30 +117,31 @@
         android:layout_alignParentBottom="true">
 
         <ImageButton
-            android:layout_width="50dp"
-            android:contentDescription="play/pause"
-
             android:id="@+id/play_button"
-            android:layout_height="50dp" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/play"
+            android:contentDescription="play/pause" />
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="2:34"/>
+            android:text="2:34" />
 
         <SeekBar
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_weight="1" />
 
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="50dp"
-          />
+            android:background="@drawable/bookmark" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/mute" />
     </LinearLayout>
 </RelativeLayout>
 

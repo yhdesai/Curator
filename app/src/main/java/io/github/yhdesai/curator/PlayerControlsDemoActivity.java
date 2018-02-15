@@ -26,6 +26,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -34,8 +35,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -59,7 +62,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
   private TextView stateText;
   private ArrayAdapter<ListEntry> videoAdapter;
   private Spinner videoChooser;
-  private Button playButton;
+  private ImageButton playButton;
   private Button pauseButton;
   private EditText skipTo;
   private TextView eventLog;
@@ -82,7 +85,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
     youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
     stateText = (TextView) findViewById(R.id.state_text);
     videoChooser = (Spinner) findViewById(R.id.video_chooser);
-    playButton = (Button) findViewById(R.id.play_button);
+    playButton = (ImageButton) findViewById(R.id.play_button);
     pauseButton = (Button) findViewById(R.id.pause_button);
     skipTo = (EditText) findViewById(R.id.skip_to_text);
     eventLog = (TextView) findViewById(R.id.event_log);
@@ -109,6 +112,10 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
     playbackEventListener = new MyPlaybackEventListener();
 
     setControlsEnabled(false);
+
+
+   // RelativeLayout video = (RelativeLayout)findViewById(R.id.videoView);
+  //  video.setBackgroundResource(R.drawable.bookmark);
   }
 
   @Override
@@ -181,7 +188,7 @@ public class PlayerControlsDemoActivity extends YouTubeFailureRecoveryActivity i
     if (isChecked && player != null) {
       switch (buttonView.getId()) {
         case R.id.style_default:
-          player.setPlayerStyle(PlayerStyle.DEFAULT);
+          player.setPlayerStyle(PlayerStyle.CHROMELESS);
           break;
         case R.id.style_minimal:
           player.setPlayerStyle(PlayerStyle.MINIMAL);
